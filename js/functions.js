@@ -11,7 +11,7 @@ function createHtml(world) {
                 <p><span>Sub Region:</span>${world.subregion}</p>
                 <p><span>Capital:</span>${world.capital}</p>
             </div>
-            <div>
+            <div class = "mediums">
                 <p><span>Top Level Domain:</span> ${world.cioc}</p>
                 <p><span>Currencies:</span>${world.currencies}</p>
                 <p><span>Languages: </span>${world.languages}</p>
@@ -23,7 +23,7 @@ function createHtml(world) {
 
 function createCard(world) {
     return `
-        <div id = "item" class="card"  style="width: 18rem;" id = "element_${world.name.slug}">
+        <div id = "item" class="card"  style="width: 19rem;" data-id = "element_${world.name.slug}">
             <img src=${world.flags.svg} class="card-img-top shunca" width="303" height="160" alt="...">
             <div class="card-body"> 
                 <h3 class="card-title">${world.name.common}</h3>
