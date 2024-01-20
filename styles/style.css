@@ -4,14 +4,27 @@
     box-sizing: border-box;
 };
 
-body {
-    background-color: #FAFAFA;
+:root {
+  --bgcolor: #fafafa;
+  --textcolor: #111517;
+  --cardcolor: white;
 }
+.darc {
+  --bgcolor: #202c36;
+  --textcolor: white;
+  --cardcolor: #2b3844;
+}
+
+body {
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
+}
+
 
 .header {
     margin-top: 20px;
     display: flex;
-    background-color: white;
+    background-color: var(--bgcolor);
     padding: 20px;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +35,7 @@ body {
 
 .header h6{
   cursor: pointer;
+  color: var(--textcolor);
 }
 
 .card{
@@ -29,6 +43,7 @@ body {
     padding-bottom:10px;
     margin-top: 40px;
     box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.06);
+    background-color:var(--bgcolor);
 };
 
 .search {
@@ -36,6 +51,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    color: var(--textcolor);
 }
 
 
@@ -44,10 +60,15 @@ body {
     height: 56px;
     flex-shrink: 0;
     border-radius: 5px;
-    background: #FFF;
+    background:var(--bgcolor);
     box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
     border: none;
     padding-left: 25px;
+    color: var(--textcolor);
+}
+
+.search input::placeholder{
+  color: var(--textcolor);
 }
 
 #select {
@@ -58,8 +79,9 @@ body {
     width: 200px;
     height: 56px;
     border-radius: 5px;
-    background: #FFF;
+    background:var(--bgcolor);
     box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    color:var(--textcolor);
 }
 .shunca{
     height: 160px;

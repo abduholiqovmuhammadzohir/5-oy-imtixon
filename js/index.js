@@ -3,9 +3,11 @@ import { createCard } from "./functions.js";
 const wrapper = document.getElementById('wrapper');
 const search = document.getElementById('search')
 const select = document.getElementById('select')
+const dark = document.getElementById('dark')
 const item = document.getElementById('item')
 const bodys = document.querySelector(".bodys")
 const loader = document.querySelector(".loader")
+const body = document.querySelector('body')
 
 bodys.style.display= "none";
 
@@ -94,4 +96,9 @@ select && select.addEventListener('change', function () {
         .catch(err => {
             console.log(err);
         });
+});
+
+
+dark && dark.addEventListener("click", () => {
+    body.classList.toggle("darc")
 });

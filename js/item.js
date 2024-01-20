@@ -1,6 +1,7 @@
 import { createHtml } from "./functions.js";
 
 const wrapper = document.getElementById('wrapper');
+const body = document.querySelector('body');
 
 const bodys = document.querySelector(".bodys")
 const loader = document.querySelector(".loader")
@@ -26,3 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.assign('http://127.0.0.1:5500/index.html');
     }
 })
+
+
+dark && dark.addEventListener("click", () => {
+    body.classList.toggle("darc")
+});
